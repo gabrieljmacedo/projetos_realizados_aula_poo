@@ -4,7 +4,7 @@ public class Bacharelado extends Formacao {
 
 	// atributos
 
-	private String cargaHorariaEstagio;
+	private short cargaHorariaEstagio;
 	private String projetoConclusao;
 
 	// construtor
@@ -13,20 +13,19 @@ public class Bacharelado extends Formacao {
 
 	}
 
-	public Bacharelado(String descricao, int duracao, float mensalidade, short periodo, String cargaHorariaEstagio,
-			String projetoConclusao) {
-		super(descricao, duracao, mensalidade, periodo);
+	public Bacharelado(short cargaHorariaEstagio, String projetoConclusao) {
+		super();
 		this.cargaHorariaEstagio = cargaHorariaEstagio;
 		this.projetoConclusao = projetoConclusao;
 	}
 
 	// gt + st
 
-	public String getCargaHorariaEstagio() {
+	public short getCargaHorariaEstagio() {
 		return cargaHorariaEstagio;
 	}
 
-	public void setCargaHorariaEstagio(String cargaHorariaEstagio) {
+	public void setCargaHorariaEstagio(short cargaHorariaEstagio) {
 		this.cargaHorariaEstagio = cargaHorariaEstagio;
 	}
 
