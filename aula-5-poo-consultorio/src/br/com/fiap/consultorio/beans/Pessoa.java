@@ -1,8 +1,8 @@
 package br.com.fiap.consultorio.beans;
 
-import br.com.fiap.consultorio.interfaces.crud;
+import br.com.fiap.consultorio.interfaces.persistencia;
 
-public abstract class Pessoa implements crud{
+public abstract class Pessoa implements persistencia{
 
 	// atributos
 	private String nome;

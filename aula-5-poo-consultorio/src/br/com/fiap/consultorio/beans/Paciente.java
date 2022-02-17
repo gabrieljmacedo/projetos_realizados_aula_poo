@@ -13,14 +13,15 @@ public class Paciente extends Pessoa {
 		super(nome, cpf, telefone);
 		
 	}
-	
+
 	//metodos
-	public void adicionar() {
-		
+	public void salvar() {
+				
 	}
-	
-	public void pesquisar() {
-		
+
+	@Override
+	public void pesquisar(String texto) {
+				
 	}
 
 }

@@ -1,21 +1,28 @@
 package br.com.fiap.consultorio.beans;
 
-public class Medico extends Pessoa {
+import java.util.Date;
+
+public class Medico extends Funcionario{
 
 	// atributos
+	
 	private String especialidade;
 	private String crm;
+	
 
 	// construtor
+	
 	public Medico() {
 
 	}
 
-	public Medico(String nome, String cpf, String telefone, String especialidade, String crm) {
-		super(nome, cpf, telefone);
+	public Medico(String nome, String cpf, String telefone, Date dtadmissao, Date dtdemissao, double salario,
+			String especialidade, String crm) {
+		super(nome, cpf, telefone, dtadmissao, dtdemissao, salario);
 		this.especialidade = especialidade;
 		this.crm = crm;
 	}
+
 
 	// gt + st
 	public String getEspecialidade() {
@@ -35,18 +42,14 @@ public class Medico extends Pessoa {
 	}
 	
 	
-	//metodos
-	public void criar() {
+	//metodos		
+	
+	@Override //puxo o metodo mas mudo a logica
+	public double calcularparticipacaoLucros() {
 		
+		return this.salario * 0.6;
+		//get salario caso não use o modificador protected
+		//return this.getSalario() * 0.6;
 	}
 	
-	public void alterar() {
-		System.out.println("Alterando da class Medico");
-		
-	}
-	
-	public void pesquisar() {
-		
-	}
-
 }

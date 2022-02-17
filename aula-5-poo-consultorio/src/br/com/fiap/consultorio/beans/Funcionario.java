@@ -7,7 +7,7 @@ public class Funcionario extends Pessoa {
 	// atributos
 	private Date dtadmissao;
 	private Date dtdemissao;
-	private double salario;
+	protected double salario;
 
 	// contrutor
 	public Funcionario() {
@@ -47,20 +47,19 @@ public class Funcionario extends Pessoa {
 	}
 	
 	//metodos
-	public void incluir() {
-		System.out.println("Adicionando");
-	}
-	
+		
 	public void salvar() {
 		System.out.println("Alterando");
 	}
 	
-	public void pesquisar() {
-		System.out.println("Consultando");
+	public void pesquisar(String texto) {
+				
 	}
 	
-	public void demitir() {
-		System.out.println("Demitindo");
+	public double calcularparticipacaoLucros() {
+		
+		return this.salario * 0.2;
+		
 	}
 
 }
